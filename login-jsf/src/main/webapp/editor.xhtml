@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:outputStylesheet library="webjars" name="primeflex/2.0.0/primeflex.min.css" />
+
+<h:head>
+</h:head>
+
+<h:body>
+  <div class="card">
+    <h:form>
+      <h5 class="p-mt-0">Basic</h5>
+      <p:textEditor widgetVar="editor1" value="#{editorView.text}" height="300"  />
+
+      <h3 class="first">Custom Toolbar</h3>
+      <p:textEditor widgetVar="editor2" value="#{editorView.text2}" height="300" placeholder="Enter your content">
+        <f:facet name="toolbar">
+             <span class="ql-formats">
+                <button class="ql-bold"></button>
+                <button class="ql-italic"></button>
+                <button class="ql-underline"></button>
+                <button class="ql-strike"></button>
+            </span>
+          <span class="ql-formats">
+                <select class="ql-font"></select>
+                <select class="ql-size"></select>
+            </span>
+        </f:facet>
+      </p:textEditor>
+    </h:form>
+  </div>
+</h:body>
+</html>
