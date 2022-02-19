@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xml:lang="en" lang="en">
+<h:head>
+    <title>New User</title>
+</h:head>
+<h:body>
+    <h1>New User</h1>
+    <h2>Welcome <h:outputText value="#{signUpBean.nom} #{signUpBean.prenom}" /></h2>
+    <b>Your profile:</b><br/>
+    <pre>
+        -Nom:                <h:outputText value="#{signUpBean.nom}" />
+        -Prenom:             <h:outputText value="#{signUpBean.prenom}" />
+        -Date de Naissance:  <h:outputText value="#{signUpBean.birth}" />
+        -Adresse:            <h:outputText value="#{signUpBean.adresse}" />
+        -Code Postal:        <h:outputText value="#{signUpBean.villePostal}" />
+        -Ville:              <h:outputText value="#{signUpBean.ville}" />
+        -Pays:               <h:outputText value="#{signUpBean.pays}" />
+    </pre>
+</h:body>
+</html>

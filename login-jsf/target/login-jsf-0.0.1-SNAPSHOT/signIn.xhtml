@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xml:lang="en" lang="en">
+<h:head>
+  <title>Login</title>
+</h:head>
+<h:body>
+  <h1>Sign In Form</h1>
+  <h:form>
+    <table>
+      <tr>
+        <td>Nom:</td> <td> <h:inputText value="#{signUpBean.nom}" /> </td>
+      </tr>
+      <tr>
+        <td>Prénom:</td> <td><h:inputText value="#{signUpBean.prenom}" /></td>
+      </tr>
+      <tr>
+        <td>Date de Naissance (jj-mm-yy):</td>
+        <td>
+          <h:inputText value="#{signUpBean.birth}">
+          <f:convertDateTime pattern="dd-mm-yyyy"/>
+          </h:inputText>
+        </td>
+      </tr>
+      <tr>
+        <td>Adresse (numero rue, son nom):</td>
+        <td><h:inputText id="adresse" value="#{signUpBean.adresse}" /></td>
+      </tr>
+      <tr>
+        <td>Code Postal et Ville:</td>
+        <td>
+          <h:inputText id="villePostal" value="#{signUpBean.villePostal}" />
+        </td>
+      </tr>
+      <tr>
+        <td>Pays:</td> <td> <h:inputText value="#{signUpBean.pays}" /> </td>
+      </tr>
+      <tr>
+        <td colspan="2"><br/></td>
+      </tr>
+      <tr>
+        <td>Password:</td> <td> <h:inputText value="#{signUpBean.nom}" /> </td>
+      </tr>
+      <tr>
+        <td>Login:</td> <td> <h:inputText value="#{signUpBean.login}" /> </td>
+      </tr>
+      <tr>
+        <td>Password:</td> <td> <h:inputText value="#{signUpBean.password}" /> </td>
+      </tr>
+    </table>
+    <br/>
+    <h:commandButton action="#{signUpBean.signUp()}" value="Signup" />
+    <h:message for="villePostal" style="color:red" /> <br/>
+    <h:message for="adresse" style="color:red" />
+  </h:form>
+</h:body>
+</html>
